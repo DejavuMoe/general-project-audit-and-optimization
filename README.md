@@ -16,13 +16,11 @@ In Claude Code, use `/general-project-audit-and-optimization audit`. With a skil
 
 ## Install in a project
 
-From the **target project's Git root**, run this command with a version of GitHub CLI that provides `gh skill install`. It installs the skill at `.agents/skills/general-project-audit-and-optimization/`.
+1. Download and extract the source ZIP from the default branch. [Download master ZIP](https://github.com/DejavuMoe/general-project-audit-and-optimization/archive/refs/heads/master.zip)
+2. In the **target project**, create `.agents/skills/general-project-audit-and-optimization/`. Copy `SKILL.md`, `references/` and `examples/` from the extracted folder directly into that directory. A local source checkout has the same layout.
+3. Open the target project in your agent and select the skill by its full name. Its installed entry point is `.agents/skills/general-project-audit-and-optimization/SKILL.md`.
 
-```sh
-gh skill install DejavuMoe/general-project-audit-and-optimization general-project-audit-and-optimization --agent universal --scope project
-```
-
-GitHub CLI selects the latest tagged release when available and otherwise uses the default branch, `master`. Add `--pin <commit SHA>` to install an exact revision. For manual installation, extract the `master` ZIP and copy `SKILL.md`, `references/` and `examples/` from its root into the same project directory. The layout is identical in a local source checkout. [GitHub CLI installation options](https://cli.github.com/manual/gh_skill_install) | [Download master ZIP](https://github.com/DejavuMoe/general-project-audit-and-optimization/archive/refs/heads/master.zip)
+For a terminal install, run the commands for your shell from the target project's root. To pin a version, take the same three entries from a specific commit's source archive. [PowerShell and POSIX shell commands](AGENTS.md#install-from-master)
 
 **To delegate installation to an agent**, paste this into the target project's chat.
 

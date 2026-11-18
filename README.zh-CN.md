@@ -16,13 +16,11 @@ $general-project-audit-and-optimization audit
 
 ## 安装到项目
 
-在**目标项目的 Git 根目录**运行下面这条命令。需要支持 `gh skill install` 的 GitHub CLI，安装位置是该项目内的 `.agents/skills/general-project-audit-and-optimization/`。
+1. 下载默认分支的源码压缩包并解压。[下载 master 压缩包](https://github.com/DejavuMoe/general-project-audit-and-optimization/archive/refs/heads/master.zip)
+2. 在**目标项目**中创建 `.agents/skills/general-project-audit-and-optimization/`。把解压目录里的 `SKILL.md`、`references/` 和 `examples/` 直接复制进去。已有本地源码时，同样可以从技能开发目录复制。
+3. 用 Agent 打开目标项目，按完整技能名选择它。安装后的入口应为 `.agents/skills/general-project-audit-and-optimization/SKILL.md`。
 
-```sh
-gh skill install DejavuMoe/general-project-audit-and-optimization general-project-audit-and-optimization --agent universal --scope project
-```
-
-GitHub CLI 优先选用最新的带标签发布版本，其次取默认分支 `master`。需要固定版本时，在命令末尾加 `--pin <提交 SHA>`。手动安装可下载并解压 `master` 压缩包，将根目录的 `SKILL.md`、`references/` 和 `examples/` 复制到上述项目目录。已有本地源码时，可从技能开发目录复制同样的文件。[GitHub CLI 安装选项](https://cli.github.com/manual/gh_skill_install) | [下载 master 压缩包](https://github.com/DejavuMoe/general-project-audit-and-optimization/archive/refs/heads/master.zip)
+如需命令行安装，在目标项目根目录运行对应的脚本即可。要固定版本，从指定提交的源码压缩包复制上述三项。[PowerShell 和 POSIX Shell 安装命令](AGENTS.md#install-from-master)
 
 **让 Agent 代为安装**时，可以在目标项目的对话里粘贴这句话。
 
